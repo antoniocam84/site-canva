@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= body {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .custom-green {
+        background-color: #1e3a2e;
+    }
+    
+    .custom-green-light {
+        background-color: #2d5a42;
+    }
+    
+    .animate-bounce-slow {
+        animation: bounce 3s infinite;
+    }
+    
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+    }
+    
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<!-- Hero Section -->
+<section id="inicio" class="custom-green text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+        <div class="text-6xl mb-6 animate-bounce-slow">🎓</div>
+        <h2 class="text-5xl font-bold mb-6">Bem-vindos ao nosso Colégio!</h2>
+        <p class="text-xl text-green-200 mb-8 max-w-2xl mx-auto">
+            Descubra o dia a dia da nossa escola, repleto de aprendizado, diversão e momentos inesquecíveis
+        </p>
+        <button onclick="scrollToSection('atividades')" class="bg-white text-green-800 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition-colors">
+            Explore Nossa Escola
+        </button>
+    </div>
+</section>
+
+<!-- Números da Escola -->
+<section id="numeros" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Nossa Comunidade Escolar</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center card-hover bg-green-50 p-8 rounded-xl">
+                <div class="text-5xl mb-4">👨‍🎓</div>
+                <div class="text-4xl font-bold custom-green text-white px-4 py-2 rounded-lg mb-2" id="alunos-counter">0</div>
+                <h3 class="text-xl font-semibold text-gray-700">Alunos</h3>
+                <p class="text-gray-600 mt-2">Do Ensino Fundamental ao Médio</p>
+            </div>
+            <div class="text-center card-hover bg-green-50 p-8 rounded-xl">
+                <div class="text-5xl mb-4">👩‍🏫</div>
+                <div class="text-4xl font-bold custom-green text-white px-4 py-2 rounded-lg mb-2" id="professores-counter">0</div>
+                <h3 class="text-xl font-semibold text-gray-700">Professores</h3>
+                <p class="text-gray-600 mt-2">Qualificados e dedicados</p>
+            </div>
+            <div class="text-center card-hover bg-green-50 p-8 rounded-xl">
+                <div class="text-5xl mb-4">👷‍♂️</div>
+                <div class="text-4xl font-bold custom-green text-white px-4 py-2 rounded-lg mb-2" id="funcionarios-counter">0</div>
+                <h3 class="text-xl font-semibold text-gray-700">Funcionários</h3>
+                <p class="text-gray-600 mt-2">Equipe de apoio completa</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Atividades Escolares -->
+<section id="atividades" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Nosso Dia a Dia</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Jogos Colegiais -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="custom-green text-white p-6 text-center">
+                    <div class="text-4xl mb-3">⚽</div>
+                    <h3 class="text-xl font-bold">Jogos Colegiais</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Competições esportivas que promovem o espírito de equipe e a vida saudável.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>🏀 Basquete</li>
+                        <li>⚽ Futebol</li>
+                        <li>🏐 Vôlei</li>
+                        <li>🏓 Tênis de Mesa</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feira de Ciências -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="custom-green text-white p-6 text-center">
+                    <div class="text-4xl mb-3">🔬</div>
+                    <h3 class="text-xl font-bold">Feira de Ciências</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Projetos inovadores que despertam a curiosidade científica dos nossos alunos.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>🧪 Experimentos</li>
+                        <li>🌱 Sustentabilidade</li>
+                        <li>🤖 Robótica</li>
+                        <li>🔭 Astronomia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Festa Junina -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="custom-green text-white p-6 text-center">
+                    <div class="text-4xl mb-3">🌽</div>
+                    <h3 class="text-xl font-bold">Festa Junina</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Tradição e diversão com danças típicas, comidas deliciosas e muita alegria.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>💃 Quadrilha</li>
+                        <li>🌽 Comidas típicas</li>
+                        <li>🎪 Barraquinhas</li>
+                        <li>🎵 Música ao vivo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Dias Cívicos -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+                <div class="custom-green text-white p-6 text-center">
+                    <div class="text-4xl mb-3">🇧🇷</div>
+                    <h3 class="text-xl font-bold">Dias Cívicos</h3>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600 mb-4">Celebrações que fortalecem o amor à pátria e os valores cidadãos.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>🎖️ Independência</li>
+                        <li>📚 Dia do Livro</li>
+                        <li>👨‍🏫 Dia do Professor</li>
+                        <li>🌍 Consciência Negra</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Eventos Especiais -->
+<section id="eventos" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Próximos Eventos</h2>
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center bg-green-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mr-6">🏆</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800">Olimpíadas Escolares</h3>
+                        <p class="text-gray-600">15 de Maio - Competições esportivas entre todas as turmas</p>
+                    </div>
+                    <div class="custom-green text-white px-4 py-2 rounded-lg font-semibold">
+                        Em breve
+                    </div>
+                </div>
+                
+                <div class="flex items-center bg-green-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mr-6">🔬</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800">Feira de Ciências 2024</h3>
+                        <p class="text-gray-600">22 de Junho - Apresentação dos projetos científicos</p>
+                    </div>
+                    <div class="custom-green text-white px-4 py-2 rounded-lg font-semibold">
+                        Inscrições abertas
+                    </div>
+                </div>
+                
+                <div class="flex items-center bg-green-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mr-6">🌽</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-gray-800">Arraiá do São Vicente</h3>
+                        <p class="text-gray-600">29 de Junho - Grande festa junina da escola</p>
+                    </div>
+                    <div class="custom-green text-white px-4 py-2 rounded-lg font-semibold">
+                        Preparando
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="custom-green text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="text-3xl">🏫</div>
+                    <h3 class="text-xl font-bold">Colégio São Vicente</h3>
+                </div>
+                <p class="text-green-200">Formando cidadãos conscientes e preparados para o futuro.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                <div class="space-y-2 text-green-200">
+                    <p>📍 Rua das Flores, 123 - Centro</p>
+                    <p>📞 (11) 3456-7890</p>
+                    <p>✉️ contato@colegiosv.edu.br</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
+                <div class="space-y-2 text-green-200">
+                    <p>Segunda a Sexta: 7h às 18h</p>
+                    <p>Sábado: 8h às 12h</p>
+                    <p>Secretaria: 7h às 17h</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-green-600 mt-8 pt-8 text-center text-green-200">
+            <p>&copy; 2024 Colégio São Vicente. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Animação dos contadores
+    function animateCounter(elementId, targetValue, duration = 2000) {
+        const element = document.getElementById(elementId);
+        const startValue = 0;
+        const increment = targetValue / (duration / 16);
+        let currentValue = startValue;
+        
+        const timer = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= targetValue) {
+                element.textContent = targetValue;
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(currentValue);
+            }
+        }, 16);
+    }
+
+    // Animação de fade-in ao scroll
+    function handleScrollAnimations() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Scroll suave para seções
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    // Observer para iniciar animações dos contadores
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.target.id === 'numeros') {
+                animateCounter('alunos-counter', 1247);
+                animateCounter('professores-counter', 89);
+                animateCounter('funcionarios-counter', 34);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+        observer.observe(document.getElementById('numeros'));
+        handleScrollAnimations();
+    });
+
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Navegação suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
